@@ -1,0 +1,85 @@
+<div class="top-space">
+
+
+  <nav class="navbar navbar-dark bg-dark ">
+    <span class="navbar-brand">Lista de Quizzes</span>
+
+    <form class="form-inline">
+      <input class="form-control mr-sm-2" type="search" placeholder="Procurar" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Procurar</button>
+    </form>
+  </nav>
+
+</div>
+
+<br>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>NOME</th>
+    <th>VISIBILIDADE</th>
+    <th>EXPERIENCIA</th>
+    <th>MOEDA</th>
+    <th>AÇÃO</th>
+  </tr>
+  <tr>
+    <td>#1</td>
+    <td>Sera que o Inovar frontend deu certo? </td>
+    <td>Privada</td>
+    <td>50</td>
+    <td>50</td>
+    <td>
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="openLg(visualizar_editar)">Visualizar/Editar</button>
+    </td>
+  </tr>
+  <td>#2</td>
+  <td>Vamos mudar o mundo?</td>
+  <td>Publica</td>
+  <td>50</td>
+  <td>500</td>
+  <td>
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="openLg(visualizar_editar)">Visualizar/Editar</button>
+  </td>
+</table>
+
+<div class="fixed-action-btn" >
+  <button class="btn btn-success" (click)="openLg(criarQuiz)"><i class="material-icons">person_add</i> <span> Criar Quiz</span></button>
+
+</div>
+
+
+<ng-template #visualizar_editar let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">Quiz</h4>
+
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  <div class="modal-body">
+    <app-nv-quiz></app-nv-quiz>
+  </div>
+
+
+</ng-template>
+
+
+<ng-template #criarQuiz let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">Novo Quiz</h4>
+
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  <div class="modal-body">
+    <app-nv-quiz></app-nv-quiz>
+  </div>
+
+  <div class="modal-footer">
+    <button type="button" class="btn btn-danger" (click)="c('Close click')">Sair</button>
+  </div>
+</ng-template>

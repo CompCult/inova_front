@@ -1,0 +1,90 @@
+<div class="top-space">
+
+
+  <nav class="navbar navbar-dark bg-dark ">
+    <span class="navbar-brand">Lista de Missoes</span>
+
+    <form class="form-inline">
+      <input class="form-control mr-sm-2" type="search" placeholder="Procurar" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Procurar</button>
+    </form>
+  </nav>
+
+</div>
+
+<br>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>DESCRIÇÃO</th>
+    <th>VISIBILIDADE</th>
+    <th>EXPERIENCIA</th>
+    <th>MOEDA</th>
+    <th>ENVIO DE MIDIA</th>
+    <th>AÇÃO</th>
+  </tr>
+  <tr>
+    <td>#1</td>
+    <td>Nessa Missao voce deve fazer o frontend mais incrivel do mundo </td>
+    <td>Privada</td>
+    <td>50</td>
+    <td>50</td>
+    <td>Ainda a verificar</td>
+    <td>
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="openLg(visualizar_editar)">Visualizar/Editar</button>
+    </td>
+  </tr>
+  <td>#2</td>
+  <td>Nessa Missão voce deve ficar acordado terminando o frontend</td>
+  <td>Publica</td>
+  <td>50</td>
+  <td>500</td>
+  <td>ainda a verificar</td>
+  <td>
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="openLg(visualizar_editar)">Visualizar/Editar</button>
+  </td>
+</table>
+
+<div class="fixed-action-btn" >
+  <button class="btn btn-success" (click)="openLg(criarMissao)"><i class="material-icons">person_add</i> <span> Criar Missoes</span></button>
+
+</div>
+
+
+<ng-template #visualizar_editar let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">Missoes</h4>
+
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  <div class="modal-body">
+    <app-nv-usuario></app-nv-usuario>
+  </div>
+
+  <div class="modal-footer">
+    <button type="button" class="btn btn-danger" (click)="c('Close click')">Sair</button>
+  </div>
+</ng-template>
+
+
+<ng-template #criarMissao let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">Novo Usuario</h4>
+
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  <div class="modal-body">
+    <app-nv-missao></app-nv-missao>
+  </div>
+
+  <div class="modal-footer">
+    <button type="button" class="btn btn-danger" (click)="c('Close click')">Sair</button>
+  </div>
+</ng-template>

@@ -1,0 +1,121 @@
+<form #usuarioForm ="ngForm" (ngSubmit)="criarUsuario(usuarioForm)">
+
+
+
+<h4>Dados da Missão</h4>
+
+<div class="form-group">
+  <label for="nome">Nome completo</label>
+  <input id="nome" [(ngModel)]="nome" class="form-control" type="text" name="nome">
+</div>
+
+
+<div class="form-group">
+  <label>Visibilidade</label>
+  <div class="form-control">
+    <label class="radio-inline">
+      <input type="radio" name="visibilidade" value="publica"
+      [(ngModel)]="visibilidade">
+      Publica
+    </label>
+
+    <label class="inline">
+      <input type="radio" name="visibilidade" value="privada"
+       [(ngModel)]="visibilidade">
+      Privada
+    </label>
+
+  </div>
+
+</div>
+
+
+<div class="form-group">
+  <label for="experiencia">Experiencia</label>
+  <input id="experiencia" [(ngModel)]="experiencia" class="form-control" type="number" name="experiencia">
+</div>
+
+
+<div class="form-group">
+  <label for="moeda">Moeda</label>
+  <input id="moeda" [(ngModel)]="moeda" class="form-control" type="number" name="moeda">
+</div>
+
+
+<div class="form-group">
+  <label for="validade">Validade da Missão</label>
+  <input id="validade" [(ngModel)]="validade" class="form-control" type="text"  bsDatepicker name="validade">
+</div>
+
+<div class="form-group">
+  <label for="alternativaA">Alternativa A</label>
+  <input id="alternativaA" [(ngModel)]="alternativaA" class="form-control" type="text" name="alternativaA">
+</div>
+
+<div class="form-group">
+  <label for="alternativaB">Alternativa B</label>
+  <input id="alternativaB" [(ngModel)]="alternativaB" class="form-control" type="text" name="alternativaB">
+</div>
+
+<div class="form-group">
+  <label for="alternativaC">Alternativa C</label>
+  <input id="alternativaC" [(ngModel)]="alternativaC" class="form-control" type="text" name="alternativaC">
+</div>
+
+<div class="form-group">
+  <label for="alternativaD">Alternativa D</label>
+  <input id="alternativaD" [(ngModel)]="alternativaD" class="form-control" type="text" name="alternativaD">
+</div>
+
+<div class="form-group">
+  <label for="alternativaE">Alternativa E</label>
+  <input id="alternativaE" [(ngModel)]="alternativaE" class="form-control" type="text" name="alternativaE">
+</div>
+
+
+
+
+
+<div class="form-group">
+  <label>Alternativa Correta</label>
+  <div class="form-control">
+    <label class="radio-inline">
+      <input type="radio" name="correta" value="a"
+      [(ngModel)]="a">
+      a
+    </label>
+
+    <label class="inline">
+      <input type="radio" name="correta" value="b"
+       [(ngModel)]="b">
+      b
+    </label>
+
+    <label class="inline">
+      <input type="radio" name="correta" value="c"
+       [(ngModel)]="c">
+      c
+    </label>
+
+    <label class="inline">
+      <input type="radio" name="correta" value="d"
+       [(ngModel)]="d">
+      d
+    </label>
+
+    <label class="inline">
+      <input type="radio" name="correta" value="e"
+       [(ngModel)]="e">
+      e
+    </label>
+
+  </div>
+
+</div>
+
+
+
+
+<button type="submit" class="btn btn-success  ">Confirmar</button>
+
+</form>

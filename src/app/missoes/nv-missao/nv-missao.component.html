@@ -1,0 +1,92 @@
+<form #usuarioForm ="ngForm" (ngSubmit)="criarUsuario(usuarioForm)">
+
+
+
+<h4>Dados da Missão</h4>
+
+<div class="form-group">
+  <label for="descricao">Descrição da Missao</label>
+  <input id="descricao" [(ngModel)]="descricao" class="form-control" type="text_area" name="descricao">
+</div>
+
+<div class="form-group">
+  <label>Visibilidade</label>
+  <div class="form-control">
+    <label class="radio-inline">
+      <input type="radio" name="visibilidade" value="publica"
+      [(ngModel)]="visibilidade">
+      Publica
+    </label>
+
+    <label class="inline">
+      <input type="radio" name="visibilidade" value="privada"
+       [(ngModel)]="visibilidade">
+      Privada
+    </label>
+
+  </div>
+
+</div>
+
+
+<div class="form-group">
+  <label for="experiencia">Experiencia</label>
+  <input id="experiencia" [(ngModel)]="experiencia" class="form-control" type="number" name="experiencia">
+</div>
+
+
+<div class="form-group">
+  <label for="moeda">Moeda</label>
+  <input id="moeda" [(ngModel)]="moeda" class="form-control" type="number" name="moeda">
+</div>
+
+
+<div class="form-group">
+  <label for="validade">Validade da Missão</label>
+  <input id="validade" [(ngModel)]="validade" class="form-control" type="text"  bsDatepicker name="validade">
+</div>
+
+
+<div class="form-group">
+  <label>Modo de Enivo</label>
+  <div class="form-control">
+    <label class="radio-inline">
+      <input type="radio" name="foto" value="foto"
+      [(ngModel)]="foto">
+      foto
+    </label>
+
+    <label class="inline">
+      <input type="radio" name="video" value="video"
+       [(ngModel)]="video">
+      video
+    </label>
+
+    <label class="inline">
+      <input type="radio" name="audio" value="audio"
+       [(ngModel)]="audio">
+      audio
+    </label>
+
+    <label class="inline">
+      <input type="radio" name="localizacao" value="localizacao"
+       [(ngModel)]="localizacao">
+      localizacao
+    </label>
+
+    <label class="inline">
+      <input type="radio" name="texto" value="texto"
+       [(ngModel)]="texto">
+      texto
+    </label>
+
+  </div>
+
+</div>
+
+
+
+
+<button type="submit" class="btn btn-success  ">Confirmar</button>
+
+</form>
