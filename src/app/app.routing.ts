@@ -7,7 +7,8 @@ import { MissoesComponent } from './missoes/missoes.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { RespostasComponent } from './missoes/respostas/respostas.component';
 import { QRespostasComponent } from './quiz/q-respostas/q-respostas.component';
-
+import { PedidosComponent } from './pedidos/pedidos.component';
+import { AvPedidosComponent } from './pedidos/av-pedidos/av-pedidos.component';
 
 const APP_ROUTES: Routes = [
   { path: '', component: LoginComponent },
@@ -16,7 +17,9 @@ const APP_ROUTES: Routes = [
   { path: 'missoes', component: MissoesComponent },
   { path: 'quiz', component: QuizComponent },
   { path: 'q-resposta', component: QRespostasComponent },
-  { path: 'm-resposta', component: RespostasComponent }
+  { path: 'm-resposta', component: RespostasComponent },
+  { path: 'g-pedidos', component: AvPedidosComponent },
+  { path: 'objetos', component: PedidosComponent }
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(APP_ROUTES);

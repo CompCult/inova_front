@@ -1,0 +1,86 @@
+<div class="top-space">
+
+
+  <nav class="navbar navbar-dark bg-dark ">
+    <span class="navbar-brand">Objetos do Pedido</span>
+
+    <form class="form-inline">
+      <input class="form-control mr-sm-2" type="search" placeholder="Procurar" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Procurar</button>
+    </form>
+  </nav>
+
+</div>
+
+<br>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>NOME</th>
+    <th>DESCRIÇÃO</th>
+    <th>QUANTIDADE</th>
+    <th>AÇÕES</th>
+  </tr>
+  <tr>
+    <td>#1</td>
+    <td>Jabuticabeira </td>
+    <td>Pé frutosa/ Não pode ficar em Calçadas</td>
+    <td>50</td>
+    <td>
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="openLg(visualizar_editar)">Visualizar/Editar</button>
+    </td>
+  </tr>
+  <tr>
+    <td>#2</td>
+    <td>Palmeira</td>
+    <td>Não frutoso/ pode ficar em qualquer lugar</td>
+    <td>8</td>
+    <td>
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="openLg(visualizar_editar)">Visualizar/Editar</button>
+    </td>
+  </tr>
+</table>
+
+<div class="fixed-action-btn" >
+  <button class="btn btn-success" (click)="openLg(novoObjeto)"><i class="material-icons">person_add</i> <span> Criar Objeto</span></button>
+
+</div>
+
+
+<ng-template #visualizar_editar let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">Objetos</h4>
+
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  <div class="modal-body">
+    <app-nv-objeto></app-nv-objeto>
+  </div>
+
+  <div class="modal-footer">
+    <button type="button" class="btn btn-danger" (click)="c('Close click')">Sair</button>
+  </div>
+</ng-template>
+
+
+<ng-template #novoObjeto let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">Novo Objeto</h4>
+
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  <div class="modal-body">
+    <app-nv-objeto></app-nv-objeto>
+  </div>
+
+  <div class="modal-footer">
+    <button type="button" class="btn btn-danger" (click)="c('Close click')">Sair</button>
+  </div>
+</ng-template>

@@ -22,6 +22,9 @@ import { RespostasComponent } from './missoes/respostas/respostas.component';
 import { QRespostasComponent } from './quiz/q-respostas/q-respostas.component';
 import { QAvaliacaoComponent } from './quiz/q-respostas/q-avaliacao/q-avaliacao.component';
 import { MAvaliacaoComponent } from './missoes/respostas/m-avaliacao/m-avaliacao.component';
+import { PedidosComponent } from './pedidos/pedidos.component';
+import { NvObjetoComponent } from './pedidos/nv-objeto/nv-objeto.component';
+import { AvPedidosComponent } from './pedidos/av-pedidos/av-pedidos.component';
 
 
 @NgModule({
@@ -38,7 +41,10 @@ import { MAvaliacaoComponent } from './missoes/respostas/m-avaliacao/m-avaliacao
     RespostasComponent,
     QRespostasComponent,
     QAvaliacaoComponent,
-    MAvaliacaoComponent
+    MAvaliacaoComponent,
+    PedidosComponent,
+    NvObjetoComponent,
+    AvPedidosComponent
   ],
   imports: [
     BrowserModule,

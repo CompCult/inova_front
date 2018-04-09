@@ -22,29 +22,42 @@
           <hr>
           <button class="dropdown-item" routerLink="m-resposta">Gerenciar Respostas</button>
         </div>
+      </li>
 
+      <li ngbDropdown class="d-inline-block ">
+        <a class="nav-link"  id="dropdownBasic1" routerLinkActive="active"  ngbDropdownToggle >
+          Quizzes
+        </a>
 
-        <li ngbDropdown class="d-inline-block ">
-          <a class="nav-link"  id="dropdownBasic1" routerLinkActive="active"  ngbDropdownToggle >
-            Quizzes
-          </a>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button class="dropdown-item" routerLink="quiz">Ver Quizzes</button>
+          <hr>
+          <button class="dropdown-item" routerLink="q-resposta">Gerenciar Respostas</button>
+        </div>
 
-          <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-            <button class="dropdown-item" routerLink="quiz">Ver Quizzes</button>
-            <hr>
-            <button class="dropdown-item" routerLink="q-resposta">Gerenciar Respostas</button>
-          </div>
+      </li>
 
+      <li ngbDropdown class="d-inline-block ">
+        <a class="nav-link"  id="dropdownBasic1" routerLinkActive="active"  ngbDropdownToggle >
+          Pedidos
+        </a>
 
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button class="dropdown-item" routerLink="objetos">Objetos</button>
+          <hr>
+          <button class="dropdown-item" routerLink="g-pedidos">Gerenciar Pedidos</button>
+        </div>
+
+      </li>
 
 
     </ul>
 
     <ul class="navbar-nav navbar-right">
-    <div class="navbar-right nav-item">
-      <a class="nav-link" routerLink="login" >Logout</a>
-    </div>
-  </ul>
+      <div class="navbar-right nav-item">
+        <a class="nav-link" routerLink="login" >Logout</a>
+      </div>
+    </ul>
   </div>
 </nav>
 
@@ -57,5 +70,5 @@
 
 <footer class="fixed-bottom">
 
-<span style="color: white">@Comcult - inovar aplication - 2018</span>
+  <span style="color: white">@Comcult - inovar aplication - 2018</span>
 </footer>
